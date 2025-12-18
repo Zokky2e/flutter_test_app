@@ -27,7 +27,7 @@ class _HomeState extends State<Home> {
           child: Column(
             verticalDirection: VerticalDirection.up,
             children: [
-              CustomBottomBar(initialTab: Tabs.home),
+              CustomBottomBar(currentTab: Tabs.home),
               Expanded(
                 child: Row(
                   verticalDirection: VerticalDirection.up,

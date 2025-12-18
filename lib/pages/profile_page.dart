@@ -26,9 +26,7 @@ class _ProfilePageState extends State<ProfilePage> {
         child: Container(
           padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: Column(
-            verticalDirection: VerticalDirection.up,
             children: [
-              CustomBottomBar(initialTab: Tabs.profile),
               Expanded(
                 child: CustomColumn(
                   text: "Profile",
@@ -44,6 +42,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   ),
                 ),
               ),
+              CustomBottomBar(currentTab: Tabs.profile),
             ],
           ),
         ),

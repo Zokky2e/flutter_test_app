@@ -12,13 +12,14 @@ class CustomItemsListView extends StatefulWidget {
 }
 
 class _CustomItemsListViewState extends State<CustomItemsListView> {
-  int selectedItem = 0;
+  int? selectedItem;
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
       itemCount: widget.list.length,
       itemBuilder: (BuildContext context, int index) {
         return CustomItemsListViewItem(
+          key: Key(widget.list[index].id.toString()),
           item: widget.list[index],
           isSelected: selectedItem == widget.list[index].id,
           onTap: () {

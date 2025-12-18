@@ -23,42 +23,22 @@ class _HistoryPageState extends State<HistoryPage> {
       body: SafeArea(
         left: false,
         right: false,
-        child: Container(
-          padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-          decoration: BoxDecoration(color: context.colors.onSurface),
-          child: Column(
-            verticalDirection: VerticalDirection.up,
-            children: [
-              CustomBottomBar(initialTab: Tabs.notifs),
-              Expanded(
-                child: Row(
-                  verticalDirection: VerticalDirection.up,
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Expanded(
-                      flex: 9,
-                      child: CustomColumn(
-                        text: "Purchase History",
-                        backgroundColor: context.colors.surface,
-                        child: Column(
-                          children: [
-                            Expanded(flex: 1, child: CustomSearchField()),
-                            Expanded(
-                              flex: 9,
-                              child: CustomItemsListView(
-                                list: purchaseItemList,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+        child: Column(
+          children: [
+            Expanded(
+              flex: 1,
+              child: CustomColumn(
+                text: "Purchase History",
+                backgroundColor: context.colors.onSurface,
+                child: CustomSearchField(),
               ),
-            ],
-          ),
+            ),
+            Expanded(
+              flex: 8,
+              child: CustomItemsListView(list: purchaseItemList),
+            ),
+            CustomBottomBar(currentTab: Tabs.notifs),
+          ],
         ),
       ),
     );

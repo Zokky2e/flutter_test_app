@@ -18,45 +18,43 @@ class CutomTextedButton extends StatelessWidget {
     Color secondary = Theme.of(context).colorScheme.secondary;
     return GestureDetector(
       onTap: onTap,
-      child: Expanded(
-        flex: 1,
-        child: Column(
-          verticalDirection: VerticalDirection.down,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-              height: 30,
-              width: 100,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(20),
-                  topRight: Radius.circular(20),
-                ),
-                color: secondary,
+      child: Column(
+        verticalDirection: VerticalDirection.down,
+        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Container(
+            height: 30,
+            width: 100,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(20),
+                topRight: Radius.circular(20),
               ),
-              child: Icon(icon, color: color),
+              color: secondary,
             ),
-            Container(
-              height: 20,
-              width: 100,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(30),
-                  bottomRight: Radius.circular(30),
-                ),
-                color: secondary,
+            child: Icon(icon, color: color),
+          ),
+          Container(
+            height: 20,
+            width: 100,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(30),
+                bottomRight: Radius.circular(30),
               ),
-              child: Text(
-                text,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: color,
-                  backgroundColor: Colors.transparent,
-                ),
+              color: secondary,
+            ),
+            child: Text(
+              text,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: color,
+                backgroundColor: Colors.transparent,
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

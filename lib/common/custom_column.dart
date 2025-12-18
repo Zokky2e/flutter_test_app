@@ -6,16 +6,19 @@ class CustomColumn extends StatelessWidget {
     super.key,
     required this.text,
     required this.backgroundColor,
+    this.crossAxisAlignment = CrossAxisAlignment.stretch,
+    this.mainAxisAlignment = MainAxisAlignment.start,
     required this.child,
   });
   final String text;
   final Color backgroundColor;
+  final CrossAxisAlignment crossAxisAlignment;
+  final MainAxisAlignment mainAxisAlignment;
   final Widget child;
   @override
   Widget build(BuildContext context) {
     Color onPrimary = Theme.of(context).colorScheme.onPrimary;
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Container(
           decoration: BoxDecoration(
@@ -35,11 +38,12 @@ class CustomColumn extends StatelessWidget {
             ),
           ),
         ),
-        Expanded(
-          child: Container(
-            decoration: BoxDecoration(color: backgroundColor),
-            padding: const EdgeInsets.symmetric(horizontal: 12),
-            child: child,
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 12),
+          child: Column(
+            crossAxisAlignment: crossAxisAlignment,
+            mainAxisAlignment: mainAxisAlignment,
+            children: [child],
           ),
         ),
       ],

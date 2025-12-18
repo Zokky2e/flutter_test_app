@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       title: 'Flutter Demo',
       theme: ThemeData(
+        useSystemColors: true,
         colorScheme: colorScheme,
         pageTransitionsTheme: PageTransitionsTheme(
           builders: {
