@@ -2,7 +2,7 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
-import 'package:flutter_test_app/components/custom_messages/purchase_item.dart';
+import 'package:flutter_test_app/components/custom_purchase_item/purchase_item.dart';
 
 class CustomItemsListViewItem extends StatelessWidget {
   final PurchaseItem item;

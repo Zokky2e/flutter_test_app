@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:flutter_test_app/components/custom_messages/purchase_item.dart';
+import 'package:flutter_test_app/components/custom_purchase_item/purchase_item.dart';
 
 class MockList {
   static Random random = Random();

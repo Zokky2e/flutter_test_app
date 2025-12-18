@@ -1,8 +1,8 @@
 // custom_container.dart
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_test_app/components/custom_messages/custom_items_list_view_item.dart';
-import 'package:flutter_test_app/components/custom_messages/purchase_item.dart';
+import 'package:flutter_test_app/components/custom_purchase_item/custom_items_list_view_item.dart';
+import 'package:flutter_test_app/components/custom_purchase_item/purchase_item.dart';
 
 class CustomItemsListView extends StatefulWidget {
   const CustomItemsListView({super.key, required this.list});

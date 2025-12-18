@@ -2,9 +2,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test_app/common/custom_column.dart';
 import 'package:flutter_test_app/components/bottom_bar/custom_bottom_bar.dart';
-import 'package:flutter_test_app/components/custom_messages/custom_items_list_view.dart';
-import 'package:flutter_test_app/components/custom_messages/custom_search_field.dart';
-import 'package:flutter_test_app/components/custom_messages/purchase_item.dart';
+import 'package:flutter_test_app/components/custom_purchase_item/custom_items_list_view.dart';
+import 'package:flutter_test_app/components/custom_purchase_item/custom_search_field.dart';
+import 'package:flutter_test_app/components/custom_purchase_item/purchase_item.dart';
 import 'package:flutter_test_app/extensions/theme_extensions.dart';
 import 'package:flutter_test_app/mocklist.dart';
 
