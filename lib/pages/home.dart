@@ -2,7 +2,9 @@
 // ignore_for_file: unused_field
 
 import 'package:flutter/material.dart';
+import 'package:flutter_test_app/common/custom_column.dart';
 import 'package:flutter_test_app/components/bottom_bar/custom_bottom_bar.dart';
+import 'package:flutter_test_app/components/product_calculator/product_calculator.dart';
 import 'package:flutter_test_app/extensions/theme_extensions.dart';
 
 class Home extends StatefulWidget {
@@ -22,8 +24,18 @@ class _HomeState extends State<Home> {
         child: Container(
           padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: Column(
-            verticalDirection: VerticalDirection.up,
-            children: [CustomBottomBar(initialTab: Tabs.home)],
+            children: [
+              Expanded(
+                child: CustomColumn(
+                  text: "Money Saver",
+                  backgroundColor: context.colors.onSurface,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  child: Center(child: ProductCalculator()),
+                ),
+              ),
+              CustomBottomBar(currentTab: Tabs.home),
+            ],
           ),
         ),
       ),
