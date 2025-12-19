@@ -27,7 +27,7 @@ class CustomColumn extends StatelessWidget {
           ),
           padding: EdgeInsets.fromLTRB(12, 0, 12, 0),
           child: Container(
-            margin: EdgeInsetsGeometry.fromLTRB(12, 16, 0, 0),
+            margin: EdgeInsetsGeometry.fromLTRB(12, 16, 0, 16),
             child: Text(
               text,
               style: TextStyle(

@@ -34,12 +34,16 @@ class _HistoryPageState extends State<HistoryPage> {
               ),
             ),
             Expanded(
-              flex: 8,
+              flex: 6,
               child: CustomItemsListView(list: purchaseItemList),
             ),
-            CustomBottomBar(currentTab: Tabs.notifs),
           ],
         ),
+      ),
+
+      bottomNavigationBar: SafeArea(
+        top: false,
+        child: CustomBottomBar(currentTab: Tabs.history),
       ),
     );
   }

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test_app/components/buttons/custom_texted_button.dart';
 import 'package:go_router/go_router.dart';
 
-enum Tabs { home, notifs, profile }
+enum Tabs { home, history, profile }
 
 class CustomBottomBar extends StatelessWidget {
   final Tabs currentTab;
@@ -31,11 +31,11 @@ class CustomBottomBar extends StatelessWidget {
           ),
           CutomTextedButton(
             onTap: () {
-              if (currentTab != Tabs.notifs) {
+              if (currentTab != Tabs.history) {
                 context.go("/history");
               }
             },
-            color: currentTab == Tabs.notifs ? onPrimaryColor : primaryColor,
+            color: currentTab == Tabs.history ? onPrimaryColor : primaryColor,
             icon: Icons.receipt,
             text: "History",
           ),

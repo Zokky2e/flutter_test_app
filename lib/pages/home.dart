@@ -34,10 +34,14 @@ class _HomeState extends State<Home> {
                   child: Center(child: ProductCalculator()),
                 ),
               ),
-              CustomBottomBar(currentTab: Tabs.home),
             ],
           ),
         ),
+      ),
+
+      bottomNavigationBar: SafeArea(
+        top: false,
+        child: CustomBottomBar(currentTab: Tabs.home),
       ),
     );
   }
