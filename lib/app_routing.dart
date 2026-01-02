@@ -4,9 +4,11 @@ import 'package:flutter_test_app/pages/history_page.dart';
 import 'package:flutter_test_app/pages/profile_page.dart';
 import 'package:flutter_test_app/pages/register_page.dart';
 import 'package:flutter_test_app/services/auth_service.dart';
+import 'package:flutter_test_app/services/product_service.dart';
 import 'package:go_router/go_router.dart';
 
 final authService = AuthService();
+final productService = ProductService();
 
 final appRouter = GoRouter(
   redirect: (context, state) async {
