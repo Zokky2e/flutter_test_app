@@ -23,7 +23,7 @@ class MockList {
       2,
       "Toyota C-HR 1.8 Hybrid",
       26.999,
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/2017_Toyota_C-HR_%28NGX10R%29_Koba_2WD_hatchback_%282018-08-06%29_01.jpg/2560px-2017_Toyota_C-HR_%28NGX10R%29_Koba_2WD_hatchback_%282018-08-06%29_01.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Toyota_C-HR_Hybrid_%28AX20%29_DSC_7239.jpg/2560px-Toyota_C-HR_Hybrid_%28AX20%29_DSC_7239.jpg",
       "12d",
     ),
     PurchaseItem(

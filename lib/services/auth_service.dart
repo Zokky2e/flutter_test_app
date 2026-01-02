@@ -39,6 +39,24 @@ class AuthService {
     }
   }
 
+  Future<bool> refreshToken() async {
+    final refreshToken = await _storage.read(key: 'refreshToken');
+    if (refreshToken == null) return false;
+
+    final res = await _dio.post(
+      '/auth/refresh',
+      data: {'grant_type': 'refresh_token', 'refresh_token': refreshToken},
+      options: Options(
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+      ),
+    );
+
+    await _storage.write(key: 'idToken', value: res.data['id_token']);
+    await _storage.write(key: 'refreshToken', value: res.data['refresh_token']);
+
+    return true;
+  }
+
   /// Save Firebase tokens securely
   Future<void> _saveTokens(Map<String, dynamic> data) async {
     await _storage.write(key: 'idToken', value: data['idToken']);
